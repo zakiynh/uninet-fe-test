@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { createPost } from "../stores/actions/blogActions";
+import { createPost, getPosts } from "../stores/actions/blogActions";
 import showError from "../helpers/swal";
 
 const CreatePost = () => {
@@ -11,31 +11,32 @@ const CreatePost = () => {
 
   const handleCreatePost = async () => {
     try {
-        if (!author || !title || !content) {
-            showError('warning', 'Please fill all the fields');
-            return;
-        }
-        const post = {
-          author,
-          title,
-          content,
-          createdAt: new Date(),
-        };
-        
-        dispatch(createPost(post));
+      if (!author || !title || !content) {
+        showError("warning", "Please fill all the fields");
+        return;
+      }
+      const post = {
+        author,
+        title,
+        content,
+        createdAt: new Date(),
+      };
 
-        setAuthor("");
-        setTitle("");
-        setContent("");
+      await dispatch(createPost(post));
+      await dispatch(getPosts());
+
+      setAuthor("");
+      setTitle("");
+      setContent("");
     } catch (error) {
-        console.error('Error creating post:', error);
+      console.error("Error creating post:", error);
     }
   };
 
   return (
-    <div className="max-w-2xl mx-auto mt-8 p-4 bg-white rounded-md shadow-md">
-      <h2 className="text-2xl font-bold mb-4">Create Blog Post</h2>
-      <form className="space-y-4">
+    <div className="max-w-2xl mx-auto mt-8 p-4 bg-white rounded-md shadow-md mx-auto">
+    <h2 className="text-2xl font-bold mb-4">Create Blog Post</h2>
+    <form className="space-y-4">
         <div className="flex flex-col">
           <label htmlFor="author" className="text-gray-700 font-semibold mb-2">
             Author:

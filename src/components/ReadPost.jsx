@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getPosts } from "../stores/actions/blogActions";
+import { getPosts, deletePost } from "../stores/actions/blogActions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router-dom";
 
 const ReadPost = () => {
   const dispatch = useDispatch();
@@ -12,6 +13,11 @@ const ReadPost = () => {
     // Panggil action untuk mendapatkan data posts dari Firestore
     dispatch(getPosts());
   }, [dispatch]);
+
+  const handleDeletePost = (id) => {
+    dispatch(deletePost(id));
+    dispatch(getPosts());
+  };
 
   return (
     <div className="container mx-auto p-4">
@@ -28,22 +34,25 @@ const ReadPost = () => {
               className="w-full h-40 object-cover object-center"
             />
             <div className="p-4 flex flex-col">
-              <h3 className="text-xl font-bold mb-2">{post.title}</h3>
+              <h3 className="text-xl text-gray-900 font-bold mb-2">{post.title}</h3>
               <p className="text-gray-600 mb-2">{post.author}</p>
               <p className="text-gray-700 mb-2">{post.content}</p>
-              <p className="text-sm text-gray-500 mb-14">
-                Posted on {post.createdAt.toDate().toLocaleDateString()}
-              </p>
+              {post.createdAt && (
+                <p className="text-sm text-gray-500 mb-2">
+                  Posted on {post.createdAt.toDate().toLocaleDateString()}
+                </p>
+              )}
             </div>
             <div className="absolute bottom-0 right-0">
-              <button
-                // onClick={() => handleDeletePost(post.id)}
+              <NavLink
+                to={`/update/${post.id}`}
+                // onClick={() => handleEditPost(post.id)}
                 className="edit-button mt-4 text-gray-500 hover:text-yellow-500 ml-auto bg-transparent border-0 outline-none focus:outline-none"
               >
                 <FontAwesomeIcon icon={faEdit} className="h-5 w-5" />
-              </button>
+              </NavLink>
               <button
-                // onClick={() => handleDeletePost(post.id)}
+                onClick={() => handleDeletePost(post.id)}
                 className="delete-button mt-4 text-gray-500 hover:text-red-500 ml-auto bg-transparent border-0 outline-none focus:outline-none"
               >
                 <FontAwesomeIcon icon={faTrash} className="h-5 w-5" />

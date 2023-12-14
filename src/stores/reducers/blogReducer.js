@@ -1,4 +1,4 @@
-import { CREATE_POST, GET_POSTS } from "../actions/actionType";
+import { CREATE_POST, GET_POSTS, DELETE_POST } from "../actions/actionType";
 
 const initialState = {
   posts: [],
@@ -16,6 +16,11 @@ const blogReducer = (state = initialState, action) => {
         ...state,
         posts: action.payload,
       };
+    case DELETE_POST:
+        return {
+            ...state,
+            posts: state.posts.filter((post) => post.id !== action.payload),
+        };
     default:
       return state;
   }

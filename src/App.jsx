@@ -4,6 +4,7 @@ import Dashboard from './views/Dashboard';
 import Login from '../src/components/LoginForm';
 import Register from './components/RegisterForm';
 import Header from './components/Header';
+import EditPost from './components/EditPost';
 
 function App() {
   const isUserLoggedIn = () => {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/update/:id" element={<EditPost />} />
       </Routes>
     </Router>
   );

@@ -4,7 +4,6 @@ import showError from '../../helpers/swal';
 
 export const login = (credentials) => async (dispatch) => {
   try {
-    // Make API call with Axios
     const response = await axios.post('https://reqres.in/api/login', credentials);
     // Save session in localStorage
     localStorage.setItem('user', JSON.stringify(response.data));
@@ -19,9 +18,7 @@ export const login = (credentials) => async (dispatch) => {
 };
 
 export const logout = () => (dispatch) => {
-  // Dispatch the logout action
   dispatch({ type: LOGOUT });
-  // Remove session from localStorage
   localStorage.removeItem('user');
   showError('success', 'Logout successful')
 };
@@ -37,13 +34,10 @@ export const registerFailure = (error) => ({
 
 export const register = (userData) => async (dispatch) => {
   try {
-    // Make API call with Axios
     const response = await axios.post('https://reqres.in/api/register', userData);
-    // Dispatch the register success action if successful
     dispatch(registerSuccess());
     showError('success', 'Register successful')
   } catch (error) {
-    // Dispatch the register failure action if unsuccessful
     dispatch(registerFailure(error.response.data));
     showError('error', error.response.data.error)
   }

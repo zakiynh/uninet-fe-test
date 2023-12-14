@@ -12,9 +12,8 @@ function LoginForm() {
   const handleLogin = async () => {
     // Call the login action
     dispatch(login({ email, password }));
-    console.log('login dispatch')
+    await dispatch(login({ email, password }));
     navigate("/dashboard");
-    console.log('login navigate')
   };
 
   const handleRegisterRedirect = () => {
