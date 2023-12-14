@@ -43,8 +43,19 @@
                     "adminfee": "0.0",
                     "billid": "11",
                     "currency": "360",
-                    "title": "TELKOMSEL 200rb - 200.149",
-                    "totalamount": "200149.00",
+                    "title": "TELKOMSEL 150rb - 146.600",
+                    "totalamount": "146600.00",
+                    "descriptions": null,
+                    "body": [
+                        "DENOM : 150000"
+                    ]
+                },
+                {
+                    "adminfee": "0.0",
+                    "billid": "12",
+                    "currency": "360",
+                    "title": "TELKOMSEL 200rb - 194.900",
+                    "totalamount": "194900.00",
                     "descriptions": null,
                     "body": [
                         "DENOM : 200000"
