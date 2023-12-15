@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import CreatePost from "../components/createPost";
+import CreatePost from "../components/CreatePost";
 import ReadPost from "../components/ReadPost";
 import { getPosts } from "../stores/actions/blogActions";
 import { LOGIN_SUCCESS } from "../stores/actions/actionType";

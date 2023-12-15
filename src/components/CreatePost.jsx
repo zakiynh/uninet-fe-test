@@ -34,7 +34,7 @@ const CreatePost = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto mt-8 p-4 bg-white rounded-md shadow-md mx-auto">
+    <div className="max-w-2xl mx-auto mt-8 p-4 bg-white rounded-md shadow-md">
     <h2 className="text-2xl font-bold mb-4">Create Blog Post</h2>
     <form className="space-y-4">
         <div className="flex flex-col">

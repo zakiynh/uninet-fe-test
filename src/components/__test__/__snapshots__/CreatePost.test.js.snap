@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreatePost should render the component 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="max-w-2xl mx-auto mt-8 p-4 bg-white rounded-md shadow-md"
+      >
+        <h2
+          class="text-2xl font-bold mb-4"
+        >
+          Create Blog Post
+        </h2>
+        <form
+          class="space-y-4"
+        >
+          <div
+            class="flex flex-col"
+          >
+            <label
+              class="text-gray-700 font-semibold mb-2"
+              for="author"
+            >
+              Author:
+            </label>
+            <input
+              class="border border-gray-300 px-3 py-2 rounded focus:outline-none focus:border-blue-500"
+              id="author"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="flex flex-col"
+          >
+            <label
+              class="text-gray-700 font-semibold mb-2"
+              for="title"
+            >
+              Title:
+            </label>
+            <input
+              class="border border-gray-300 px-3 py-2 rounded focus:outline-none focus:border-blue-500"
+              id="title"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="flex flex-col"
+          >
+            <label
+              class="text-gray-700 font-semibold mb-2"
+              for="content"
+            >
+              Content:
+            </label>
+            <textarea
+              class="border border-gray-300 px-3 py-2 rounded focus:outline-none focus:border-blue-500"
+              id="content"
+              rows="5"
+            />
+          </div>
+          <button
+            class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none"
+            type="button"
+          >
+            Create Post
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="max-w-2xl mx-auto mt-8 p-4 bg-white rounded-md shadow-md"
+    >
+      <h2
+        class="text-2xl font-bold mb-4"
+      >
+        Create Blog Post
+      </h2>
+      <form
+        class="space-y-4"
+      >
+        <div
+          class="flex flex-col"
+        >
+          <label
+            class="text-gray-700 font-semibold mb-2"
+            for="author"
+          >
+            Author:
+          </label>
+          <input
+            class="border border-gray-300 px-3 py-2 rounded focus:outline-none focus:border-blue-500"
+            id="author"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="flex flex-col"
+        >
+          <label
+            class="text-gray-700 font-semibold mb-2"
+            for="title"
+          >
+            Title:
+          </label>
+          <input
+            class="border border-gray-300 px-3 py-2 rounded focus:outline-none focus:border-blue-500"
+            id="title"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="flex flex-col"
+        >
+          <label
+            class="text-gray-700 font-semibold mb-2"
+            for="content"
+          >
+            Content:
+          </label>
+          <textarea
+            class="border border-gray-300 px-3 py-2 rounded focus:outline-none focus:border-blue-500"
+            id="content"
+            rows="5"
+          />
+        </div>
+        <button
+          class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none"
+          type="button"
+        >
+          Create Post
+        </button>
+      </form>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
