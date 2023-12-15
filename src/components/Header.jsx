@@ -18,8 +18,9 @@ function Header() {
   return (
     <header>
       <nav className="flex items-center justify-between p-4 bg-gray-800 text-white">
-        <Link to="/dashboard">
-          <h1 className="text-lg font-bold">My App</h1>
+        <Link to="/dashboard" className="flex justify-between">
+          <img src="/src/assets/logo.png" alt="logo" className="w-10" />
+          <h1 className="text-lg font-bold mx-3">My App</h1>
         </Link>
         <div className="flex items-center">
           <div className="mr-4">
