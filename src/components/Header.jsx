@@ -1,8 +1,8 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../stores/actions/authActions";
-import { useNavigate } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 function Header() {
   const dispatch = useDispatch();
@@ -19,7 +19,7 @@ function Header() {
     <header>
       <nav className="flex items-center justify-between p-4 bg-gray-800 text-white">
         <Link to="/dashboard" className="flex justify-between">
-          <img src="../assets/logo.png" alt="logo" className="w-10" />
+          <img src={logo} alt="logo" className="w-10" />
           <h1 className="text-lg font-bold mx-3">My App</h1>
         </Link>
         <div className="flex items-center">
