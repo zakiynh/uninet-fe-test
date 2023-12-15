@@ -23,22 +23,17 @@ export const logout = () => (dispatch) => {
   showError('success', 'Logout successful')
 };
 
-export const registerSuccess = () => ({
-  type: REGISTER_SUCCESS,
-});
-
-export const registerFailure = (error) => ({
-  type: REGISTER_FAILURE,
-  payload: error,
-});
-
 export const register = (userData) => async (dispatch) => {
-  try {
-    const response = await axios.post('https://reqres.in/api/register', userData);
-    dispatch(registerSuccess());
-    showError('success', 'Register successful')
-  } catch (error) {
-    dispatch(registerFailure(error.response.data));
-    showError('error', error.response.data.error)
-  }
+  return new Promise(async (resolve, reject) => {
+    try {
+      const response = await axios.post('https://reqres.in/api/register', userData);
+      dispatch({ type: REGISTER_SUCCESS, payload: response.data });
+      showError('success', 'Register successful');
+      resolve();
+    } catch (error) {
+      dispatch(registerFailure(error.response.data));
+      showError('error', error.response.data.error);
+      reject(error);
+    }
+  });
 }

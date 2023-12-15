@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import CreatePost from "../components/CreatePost";
+import CreatePosts from "../components/CreatePosts";
 import ReadPost from "../components/ReadPost";
 import { getPosts } from "../stores/actions/blogActions";
 import { LOGIN_SUCCESS } from "../stores/actions/actionType";
@@ -34,7 +34,7 @@ function Dashboard() {
             <h2 className="text-3xl font-bold mb-4">
               Welcome to the Thread Blog
             </h2>
-            <CreatePost />
+            <CreatePosts />
             <ReadPost />
           </>
         )}

@@ -11,8 +11,8 @@ function RegisterForm() {
 
   const handleRegister = async () => {
     // Call the register action
-    dispatch(register({ email, password }));
-    navigate('/');
+    await dispatch(register({ email, password }));
+    navigate('/login');
   };
 
   const handleLoginRedirect = () => {

@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { createPost, getPosts } from "../stores/actions/blogActions";
 import showError from "../helpers/swal";
 
-const CreatePost = () => {
+const CreatePosts = () => {
   const dispatch = useDispatch();
   const [author, setAuthor] = useState("");
   const [title, setTitle] = useState("");
@@ -85,4 +85,4 @@ const CreatePost = () => {
   );
 };
 
-export default CreatePost;
+export default CreatePosts;
