@@ -14,9 +14,9 @@ const ReadPost = () => {
     dispatch(getPosts());
   }, [dispatch]);
 
-  const handleDeletePost = (id) => {
-    dispatch(deletePost(id));
-    dispatch(getPosts());
+  const handleDeletePost = async (id) => {
+    await dispatch(deletePost(id));
+    await dispatch(getPosts());
   };
 
   return (
